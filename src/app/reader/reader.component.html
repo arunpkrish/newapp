@@ -1,9 +1,9 @@
 <br>
 <br><br>
-<div style="text-align: center;">
+<div style="text-align: center;" class="container">
     <input type="text" style="width: 60%;" [(ngModel)]="urlStr" />&nbsp;<br><br>
     <input type="text" [(ngModel)]="pagenumber" />&nbsp;<br><br>
     <button (click)="getPosts()" class="btn btn-primary">Get Text</button> {{data}}
 </div>
 <br>
-<div id="content" style="border: 1px solid red;">{{data}}</div>
+<div id="content" style="border: 1px solid red;">{{stringifiedData}}</div>

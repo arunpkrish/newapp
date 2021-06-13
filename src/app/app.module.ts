@@ -9,13 +9,15 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ProductComponent } from './product/product.component';
 import { ReaderComponent } from './reader/reader.component';
+import { DataComponent } from './data/data.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ProductComponent,
-    ReaderComponent
+    ReaderComponent,
+    DataComponent
   ],
   imports: [
     BrowserModule,

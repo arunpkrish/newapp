@@ -11,6 +11,7 @@ export class ReaderComponent implements OnInit {
   urlStr = 'https://discussions.apple.com/community/iphone/iphone_hardware?page=';
   pagenumber = '1';
   finalUrlStr = '';
+  stringifiedData = '';
   constructor(private apiCall: ApiCallService) { }
 
   ngOnInit(): void {
@@ -21,6 +22,7 @@ export class ReaderComponent implements OnInit {
     this.finalUrlStr = this.urlStr + this.pagenumber;
     this.apiCall.getSiteData(this.finalUrlStr).subscribe((res: any) => {
       this.data = res;
+      this.stringifiedData = JSON.stringify(res);
     });
   }
 
