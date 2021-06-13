@@ -10,4 +10,9 @@ export class ApiCallService {
   getData(): any{
     return this.http.get<any>('https://jsonplaceholder.typicode.com/todos/');
   }
+
+  getSiteData(urlStr: any): any{
+    alert(urlStr);
+    return this.http.get<any>(urlStr);
+  }
 }
