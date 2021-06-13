@@ -7,7 +7,9 @@ import { ReaderComponent } from './reader/reader.component';
 const routes: Routes = [
   { path: 'Home', component: HomeComponent },
   { path: 'Product', component: ProductComponent },
-  { path: 'Reader', component: ReaderComponent }
+  { path: 'Reader', component: ReaderComponent },
+  // Wild Card Route
+  { path: '**', pathMatch   : 'full', component: ReaderComponent},
 ];
 
 @NgModule({

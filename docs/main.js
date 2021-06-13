@@ -528,7 +528,9 @@ __webpack_require__.r(__webpack_exports__);
 const routes = [
     { path: 'Home', component: _home_home_component__WEBPACK_IMPORTED_MODULE_1__["HomeComponent"] },
     { path: 'Product', component: _product_product_component__WEBPACK_IMPORTED_MODULE_2__["ProductComponent"] },
-    { path: 'Reader', component: _reader_reader_component__WEBPACK_IMPORTED_MODULE_3__["ReaderComponent"] }
+    { path: 'Reader', component: _reader_reader_component__WEBPACK_IMPORTED_MODULE_3__["ReaderComponent"] },
+    // Wild Card Route
+    { path: '**', pathMatch: 'full', component: _reader_reader_component__WEBPACK_IMPORTED_MODULE_3__["ReaderComponent"] },
 ];
 class AppRoutingModule {
 }
