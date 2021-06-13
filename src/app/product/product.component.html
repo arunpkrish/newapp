@@ -1,1 +1,18 @@
 <p>product works!</p>
+<div>
+    <table class="table table-striped table-dark" style="height: 400px; overflow-y: scroll;">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of dataArray">
+                <td>{{item.id}}</td>
+                <td>{{item.title}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
