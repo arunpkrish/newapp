@@ -1,0 +1,21 @@
+<div style="text-align: center;">
+    <h1>New App {{sampletest}} &nbsp; {{count}}</h1>
+    <h1 [hidden]="isHidden" [style.background-color]="colorFunction()">Hidden on click {{data.var3}}</h1>
+    <h1>Input value is {{str}}</h1>
+    <input type="text" [style.background-color]="colorFunction()" [(ngModel)]="str" />
+    <button type="submit" class="btn" (click)="clickMe()">Add</button>
+
+    <br>
+    <table>
+        <thead>
+            <th>ID</th>
+            <th>COLOR</th>
+        </thead>
+        <tbody *ngFor="let color of colors">
+            <tr *ngIf="color.id>1" [style.background-color]="color.name">
+                <td>{{color.id}}</td>
+                <td>{{color.name}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
