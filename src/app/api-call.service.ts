@@ -15,4 +15,8 @@ export class ApiCallService {
     alert(urlStr);
     return this.http.get<any>(urlStr);
   }
+
+  savePost(body: any): any{
+    return this.http.post('https://jsonplaceholder.typicode.com/posts', body);
+  }
 }

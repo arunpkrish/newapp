@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiCallService } from '../api-call.service';
 
 @Component({
   selector: 'app-data',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DataComponent implements OnInit {
 
-  constructor() { }
+  result = '';
+  post = {
+     title: '',
+     content: ''
+  };
+
+  constructor(private apiCall: ApiCallService) { }
 
   ngOnInit(): void {
+  }
+
+  onsubmit(): void{
+    alert(JSON.stringify(this.post));
+    this.apiCall.savePost(JSON.stringify(this.post)).subscribe((res: any) => {
+      this.result = JSON.stringify(res);
+    });
   }
 
 }

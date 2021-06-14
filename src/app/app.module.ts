@@ -1,6 +1,6 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { ApiCallService } from './api-call.service';
 
@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { ProductComponent } from './product/product.component';
 import { ReaderComponent } from './reader/reader.component';
 import { DataComponent } from './data/data.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
 @NgModule({
   declarations: [
@@ -17,13 +18,15 @@ import { DataComponent } from './data/data.component';
     HomeComponent,
     ProductComponent,
     ReaderComponent,
-    DataComponent
+    DataComponent,
+    ReactiveFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [ApiCallService],
   bootstrap: [AppComponent]
